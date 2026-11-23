@@ -1,0 +1,111 @@
+/* Shona Store - CSS tema musiman (Ramadan, Nuzulul Quran, Idul Fitri, Idul Adha, Muharram, Imlek, Natal, Kemerdekaan, Midnight Glass)
+   Dipindah dari template XML. Dimuat lewat <link> di <head>. */
+body.ss-season-dark .ssa{--ssa-surface:var(--ss-card);--ssa-soft:rgba(148, 163, 184, 0.1);--ssa-line:var(--ss-border);--ssa-text:var(--ss-text);--ssa-sub:var(--ss-muted);--ssa-a-soft:rgba(16, 185, 129, 0.12)}
+body.ss-season-dark .ssa-head{background:var(--ssa-surface)}
+body.ss-season-dark .ssa-tabs{background:var(--ssa-soft)}
+body.ss-season-dark .ssa-label{color:var(--ssa-text)}
+body.ss-season-dark .ssa-in:disabled{background:var(--ssa-soft)}
+body.ss-season-dark .ssa-empty-t{color:var(--ssa-text)}
+body.ss-season-dark .ssa-admin{background:rgba(245, 158, 11, 0.08);border-color:rgba(245, 158, 11, 0.3)}
+.ss-sea-art,.ss-sea-strip-wrap,.ss-sea-pill,.ss-sea-wm,.ss-sea-navorn,.ss-sea-botorn{display:none}
+body.ss-season-on .ss-header-inner{position:relative;z-index:1}
+body.ss-season-on .ss-sea-art{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit;z-index:0}
+body.ss-season-on .ss-sea-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,.10) 100%)}
+.ss-sea-svg{width:100%;height:100%;display:block}
+@keyframes ssSeaSway{0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); }}
+@keyframes ssSeaSway2{0%,100% { transform: rotate(3.5deg); } 50% { transform: rotate(-3.5deg); }}
+@keyframes ssSeaTwinkle{0%,100% { opacity: .3; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.2); }}
+@keyframes ssSeaFloat{0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); }}
+@keyframes ssSeaSnow{0% { transform: translateY(-10px) translateX(0); opacity: 0; } 20% { opacity: .9; } 100% { transform: translateY(190px) translateX(12px); opacity: .1; }}
+@keyframes ssSeaPulse{0%,100% { transform: scale(.95); opacity: .5; } 50% { transform: scale(1.08); opacity: .95; }}
+.ss-sea-sway{animation:ssSeaSway 4s ease-in-out infinite}
+.ss-sea-sway2{animation:ssSeaSway2 5.2s ease-in-out infinite}
+.ss-sea-twinkle{animation:ssSeaTwinkle 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.ss-sea-twinkle2{animation:ssSeaTwinkle 3.6s ease-in-out 1.3s infinite;transform-box:fill-box;transform-origin:center}
+.ss-sea-float{animation:ssSeaFloat 4.5s ease-in-out infinite}
+.ss-sea-snow1{animation:ssSeaSnow 4.5s linear infinite}
+.ss-sea-snow2{animation:ssSeaSnow 5.8s linear 1.5s infinite}
+.ss-sea-snow3{animation:ssSeaSnow 5.1s linear 2.7s infinite}
+.ss-sea-pulse{animation:ssSeaPulse 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion: reduce){
+.ss-sea-sway,.ss-sea-sway2,.ss-sea-twinkle,.ss-sea-twinkle2,.ss-sea-float,.ss-sea-snow1,.ss-sea-snow2,.ss-sea-snow3,.ss-sea-pulse{animation:none}
+}
+html.ss-sea-root{background-image:radial-gradient(var(--ss-sea-pattern) 1.5px, transparent 1.5px), linear-gradient(180deg, var(--ss-sea-bg-a) 0%, var(--ss-sea-bg-b) 100%);background-size:20px 20px, 100% 100%;background-attachment:fixed}
+body.ss-season-on{background-color:transparent}
+body.ss-season-on .ss-sea-wm{display:block;position:fixed;inset:0;overflow:hidden;pointer-events:none;opacity:.6;z-index:0}
+body.ss-season-on .ss-sea-pill{display:inline-block;margin-left:8px;padding:2px 9px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:0;line-height:1.5;vertical-align:middle;color:#FFFFFF;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.28)}
+@media (max-width: 400px){
+body.ss-season-on .ss-sea-pill{display:none}
+}
+body.ss-season-on .ss-sea-strip-wrap{display:block;position:relative;z-index:1;padding-bottom:10px}
+.ss-sea-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 12px;border-radius:14px;font-size:12px;color:#FFFFFF;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(0,0,0,.10)}
+.ss-sea-strip-main{display:flex;align-items:center;gap:8px;min-width:0;font-weight:600}
+.ss-sea-strip-icon{font-size:16px;line-height:1;flex:none}
+.ss-sea-strip-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ss-sea-strip-sub{flex:none;font-size:10px;font-weight:800;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.25)}
+body.ss-season-on .ss-brand-icon{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3)}
+body.ss-season-on .ss-search-submit{background:var(--ss-blue-dark)}
+body.ss-season-on .ss-badge-count,body.ss-season-on .ss-notif-dot{border-color:var(--ss-blue-dark)}
+body.ss-season-on .ss-hero-slide,body.ss-season-on .ss-hero-slide.slide-prop,body.ss-season-on .ss-hero-slide.slide-promo{background:linear-gradient(125deg, var(--ss-hero-a) 0%, var(--ss-hero-b) 100%)}
+body.ss-season-on .ss-sea-botorn{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:999px;z-index:0}
+body.ss-season-on .ss-mobile-bottom-nav{background:var(--ss-sea-nav-surface);border-color:var(--ss-sea-nav-border)}
+body.ss-season-on .ss-bnav-indicator{background:var(--ss-sea-nav-pill);border:1px solid var(--ss-blue);box-shadow:0 4px 12px var(--ss-sea-glow)}
+body.ss-season-on .ss-bnav-btn{position:relative;z-index:2;color:var(--ss-sea-nav-muted)}
+body.ss-season-on .ss-bnav-btn.active{color:var(--ss-blue)}
+@media (max-width: 768px){
+body.ss-season-on .ss-header-inner{padding-bottom:12px}
+body.ss-season-on .ss-sea-strip-wrap{padding-bottom:54px}
+body.ss-season-on .ss-navbar{background:var(--ss-sea-nav-surface);border:1px solid var(--ss-sea-nav-border)}
+body.ss-season-on .ss-navbar .ss-container{position:relative;z-index:1}
+body.ss-season-on .ss-sea-navorn{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;border-radius:inherit;z-index:0}
+body.ss-season-on .ss-nav-link{color:var(--ss-sea-nav-muted)}
+body.ss-season-on .ss-nav-link.active{color:var(--ss-blue)}
+}
+@media (min-width: 769px){
+body.ss-season-on .ss-header{background:var(--ss-grad-header);border-bottom:0;color:#FFFFFF;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+body.ss-season-on .ss-brand-text .ss-site-title{color:#FFFFFF}
+body.ss-season-on .ss-brand-text p{color:rgba(255,255,255,.9)}
+body.ss-season-on .ss-action-btn{color:#FFFFFF}
+body.ss-season-on .ss-action-btn:hover{background:rgba(255,255,255,.18);color:#FFFFFF}
+body.ss-season-on .ss-sea-art svg.ss-sea-svg{position:absolute;right:max(0px, calc(50% - 520px));top:0;height:100%;width:auto;-webkit-mask-image:linear-gradient(to left, #000 65%, transparent);mask-image:linear-gradient(to left, #000 65%, transparent)}
+}
+body.ss-season-dark .ss-diskusi,body.ss-season-dark .ss-drawer,body.ss-season-dark .ss-footer,body.ss-season-dark .ss-nav-dropdown,body.ss-season-dark .ss-notif-pop,body.ss-season-dark .ss-pd,body.ss-season-dark .ss-pd-sec,body.ss-season-dark .ss-prod-card,body.ss-season-dark .ss-prod-media,body.ss-season-dark .ss-prop-card,body.ss-season-dark .ss-search-drop,body.ss-season-dark .ss-side-card,body.ss-season-dark .ss-side-widgets .widget,body.ss-season-dark .ss-single-wrap,body.ss-season-dark .ss-store,body.ss-season-dark .ss-usp-item,body.ss-season-dark .ss-sort-select,body.ss-season-dark .ss-view-toggles,body.ss-season-dark .ss-qty,body.ss-season-dark .ss-var-opt,body.ss-season-dark .ssx-in,body.ss-season-dark .ssf-or,body.ss-season-dark .ssf-c,body.ss-season-dark .ss-label-count,body.ss-season-dark .ss-gal-thumb,body.ss-season-dark .ss-kpr-grid input[type="number"],body.ss-season-dark .ss-kpr-grid select{background:var(--ss-card);border-color:var(--ss-border);color:var(--ss-text)}
+body.ss-season-dark .ss-prod-card h1,body.ss-season-dark .ss-prod-card h2,body.ss-season-dark .ss-prod-card h3,body.ss-season-dark .ss-prod-card h4,body.ss-season-dark .ss-prod-card a,body.ss-season-dark .ss-prop-card h1,body.ss-season-dark .ss-prop-card h2,body.ss-season-dark .ss-prop-card h3,body.ss-season-dark .ss-prop-card h4,body.ss-season-dark .ss-prop-card a,body.ss-season-dark .ss-side-card h3,body.ss-season-dark .ss-side-widgets .widget h3,body.ss-season-dark .ss-side-widgets .widget a,body.ss-season-dark .ss-usp-item,body.ss-season-dark .ss-footer h3,body.ss-season-dark .ss-footer h4,body.ss-season-dark .ss-footer a,body.ss-season-dark .ss-footer p,body.ss-season-dark .ss-pd h1,body.ss-season-dark .ss-pd h2,body.ss-season-dark .ss-pd h3,body.ss-season-dark .ss-pd p,body.ss-season-dark .ss-pd li,body.ss-season-dark .ss-pd-sec h2,body.ss-season-dark .ss-pd-sec h3,body.ss-season-dark .ss-diskusi h2,body.ss-season-dark .ss-diskusi h3{color:var(--ss-text)}
+#ssSeaTester{position:fixed;left:8px;right:8px;bottom:84px;z-index:99999;max-width:460px;margin:0 auto;background:rgba(255,255,255,.97);border:1px solid #E2E8F0;border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,.22);padding:8px;font-family:inherit}
+#ssSeaTester .ss-sea-t-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#475569;margin:0 4px 6px}
+#ssSeaTester .ss-sea-t-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+#ssSeaTester button{flex:0 0 auto;min-width:64px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 6px;cursor:pointer;border:1px solid #E2E8F0;border-radius:12px;background:#F8FAFC;color:#334155;font-size:10px;font-weight:700;white-space:nowrap}
+#ssSeaTester button span:first-child{font-size:15px}
+#ssSeaTester button.on{background:#0F172A;border-color:#0F172A;color:#FFFFFF}
+@media (min-width: 769px){
+body.ss-season-on .ss-header{background:var(--ss-grad-header) 0 0 / 100% var(--ss-top-h, 100%) no-repeat;box-shadow:none}
+body.ss-season-on.ss-scrolled .ss-header{box-shadow:0 6px 20px rgba(0,0,0,.22)}
+body.ss-season-on .ss-navbar{position:relative;background:var(--ss-grad-header) 0 calc(-1 * var(--ss-head-h, 0px)) / 100% var(--ss-top-h, 100%) no-repeat;border:0;box-shadow:none}
+body.ss-season-on .ss-navbar .ss-container{position:relative;z-index:1}
+body.ss-season-on .ss-sea-navorn{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;border-radius:0}
+body.ss-season-on .ss-sea-art::after{inset:0 0 auto 0;height:var(--ss-top-h, 100%)}
+body.ss-season-on .ss-sea-navorn::after{content:"";position:absolute;left:0;right:0;top:calc(-1 * var(--ss-head-h, 0px));height:var(--ss-top-h, 100%);background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,.10) 100%)}
+body.ss-season-on .ss-sea-layer{position:absolute;top:0;height:var(--ss-top-h, 180px);width:calc(var(--ss-top-h, 180px) * 1.913);-webkit-mask-image:linear-gradient(to left, #000 60%, transparent);mask-image:linear-gradient(to left, #000 60%, transparent)}
+body.ss-season-on .ss-sea-navorn .ss-sea-layer{top:calc(-1 * var(--ss-head-h, 0px))}
+body.ss-season-on .ss-sea-layer-r{right:0}
+body.ss-season-on .ss-sea-layer-l{left:0;transform:scaleX(-1)}
+body.ss-season-on .ss-sea-layer svg.ss-sea-svg{position:static;right:auto;width:100%;height:100%;-webkit-mask-image:none;mask-image:none}
+}
+body.ss-season-dark .ss-ship-chip{background:rgba(30, 41, 59, .9);border-color:#334155;color:#CBD5E1}
+body.ss-season-dark .ss-lokchip{color:#94A3B8}
+body.ss-season-dark .ssn-live{background:#0F172A;border-color:#334155}
+body.ss-season-dark .ssl-ov{--sl-card:#0F172A;--sl-sub:#1E293B;--sl-text:#F1F5F9;--sl-mute:#CBD5E1;--sl-faint:#94A3B8;--sl-line:#334155;--sl-in:#1E293B;--sl-inl:#475569;--sl-brandbg:rgba(2, 132, 199, .18);--sl-brand:#38BDF8;--sl-brand2:#0EA5E9;--sl-okbg:rgba(16, 185, 129, .16);--sl-ok:#6EE7B7;--sl-badbg:rgba(244, 63, 94, .14);--sl-badl:rgba(244, 63, 94, .35);--sl-bad:#FDA4AF;--sl-warnbg:rgba(245, 158, 11, .14);--sl-warnl:rgba(245, 158, 11, .35);--sl-warn:#FCD34D}
+body.ss-season-dark .ssl-go,body.ss-season-dark .ssl-gps{color:#0F172A}
+body.ss-season-dark .sslg-ship{background:rgba(15, 23, 42, .82);border-color:rgba(148, 163, 184, .25)}
+body.ss-season-dark .sslg-opt b,body.ss-season-dark .sslg-ship-h,body.ss-season-dark .sslg-pr-t b,body.ss-season-dark .sslg-fl-h{color:#F1F5F9}
+body.ss-season-dark .sslg-in{background:rgba(30, 41, 59, .9);color:#F1F5F9;border-color:#334155}
+body.ss-season-dark .sslg-opt{background:rgba(30, 41, 59, .7);border-color:#334155}
+body.ss-season-dark .sslg-opt.on{background:rgba(0, 102, 255, .2);border-color:#3B82F6}
+body.ss-season-dark .sslg-lbl,body.ss-season-dark .sslg-note{color:#CBD5E1}
+body.ss-season-dark .ssa-admin.sslg-adm{background:rgba(15, 23, 42, .92);border-color:rgba(148, 163, 184, .25);color:#F1F5F9}
+body.ss-season-dark .ssa-admin.sslg-adm>summary,body.ss-season-dark .sslg-adm .sslg-fl-h,body.ss-season-dark .sslg-adm .sslg-fl-h b,body.ss-season-dark .sslg-adm .sslg-pr-t b,body.ss-season-dark .sslg-sc b{color:#F1F5F9}
+body.ss-season-dark .sslg-adm .sslg-in{background:rgba(30, 41, 59, .9);border-color:#334155;color:#F1F5F9}
+body.ss-season-dark .sslg-tabs,body.ss-season-dark .sslg-sc,body.ss-season-dark .sslg-adm .sslg-note,body.ss-season-dark .sslg-json,body.ss-season-dark .sslg-tb th{background:rgba(30, 41, 59, .7);border-color:#334155;color:#CBD5E1}
+body.ss-season-dark .sslg-chip,body.ss-season-dark .sslg-tw{background:rgba(30, 41, 59, .7);border-color:#334155;color:#E2E8F0}
+body.ss-season-dark .sslg-tb,body.ss-season-dark .sslg-tb td{color:#E2E8F0;border-color:#334155}
+body.ss-season-dark .sslg-btn.ghost2{background:#1E293B;color:#E2E8F0}
