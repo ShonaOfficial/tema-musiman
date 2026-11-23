@@ -1,8 +1,8 @@
 /* Shona Store - JS tema musiman & gaya tampilan (dipindah dari template XML) */
-/* [PATCH V1.1.11] TEMA MUSIMAN & GAYA TAMPILAN (10 tema)
+/* [PATCH V1.1.11] TEMA MUSIMAN & GAYA TAMPILAN (13 tema)
      Otomatis menurut tanggal (Hijriah, Imlek, Natal, Kemerdekaan). Tema "darkneon" (Midnight Glass) hanya manual.
      Paksa satu tema: isi SS_SEASON_FORCE dengan 'default' | 'ramadan' | 'nuzululquran' | 'idulfitri' | 'iduladha'
-     | 'muharram' | 'imlek' | 'natal' | 'kemerdekaan' | 'darkneon' (kosongkan '' agar otomatis).
+     | 'muharram' | 'maulid' | 'isra' | 'harbolnas' | 'imlek' | 'natal' | 'kemerdekaan' | 'darkneon' (kosongkan '' agar otomatis).
      Uji cepat tanpa edit: tambahkan ?tema=ramadan di alamat blog. */
   (function () {
     var SS_SEASON_FORCE = '';
@@ -695,6 +695,208 @@ var SEASON_THEMES = {
         `,
       },
 
+      isra: {
+        shortName: 'Isra Mi’raj',
+        icon: SEA_ICO.sparkle,
+        label: 'Isra Mi’raj',
+        pillText: 'Isra Mi’raj',
+        greetingShow: true,
+        greetingIcon: SEA_ICO.mosque,
+        greetingText: 'Selamat Memperingati Isra Mi’raj {Y}H',
+        greetingSub: 'Berkah Rajab',
+        colors: {
+          '--desktop-bg-start': '#ddd6fe',
+          '--desktop-bg-end': '#c4b5fd',
+          '--app-bg-start': '#faf5ff',
+          '--app-bg-end': '#ede9fe',
+          '--pattern-color': 'rgba(109, 40, 217, 0.055)',
+          '--header-bg-start': '#1e1b4b',
+          '--header-bg-end': '#6d28d9',
+          '--accent-primary': '#6d28d9',
+          '--accent-dark': '#1e1b4b',
+          '--accent-soft': '#f5f3ff',
+          '--accent-glow': 'rgba(109, 40, 217, 0.22)',
+          '--nav-surface': 'rgba(250, 245, 255, 0.95)',
+          '--nav-border': 'rgba(221, 214, 254, 0.9)',
+          '--nav-text-muted': '#6d28d9',
+          '--nav-pill-bg': '#ede9fe',
+          '--card-surface': '#ffffff',
+          '--card-border': '#ddd6fe',
+          '--text-primary': '#1e1b4b',
+          '--text-secondary': '#6d28d9',
+          '--hero-bg-start': '#1e1b4b',
+          '--hero-bg-end': '#6d28d9',
+        },
+        artworkSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 440 230" preserveAspectRatio="xMidYMid slice" fill="none">
+            <circle cx="250" cy="30" r="2" fill="white" class="ss-sea-twinkle" />
+            <circle cx="300" cy="52" r="2.5" fill="#fde047" class="ss-sea-twinkle2" />
+            <circle cx="345" cy="24" r="1.8" fill="white" class="ss-sea-twinkle" />
+            <circle cx="205" cy="48" r="1.5" fill="#ddd6fe" class="ss-sea-twinkle2" />
+            <circle cx="395" cy="62" r="2" fill="#fde047" class="ss-sea-twinkle" />
+            <path d="M398 34C384 36 374 48 374 62C374 77 386 89 401 89C408 89 414 86 419 82C415 83 411 84 407 84C392 84 380 72 380 57C380 47 387 38 398 34Z" fill="#fef9c3" fill-opacity="0.95" />
+            <path d="M62 150C130 70 250 70 330 130" stroke="#fde047" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="4 5" stroke-linecap="round" />
+            <circle cx="330" cy="130" r="3" fill="#fde047" fill-opacity="0.9" class="ss-sea-pulse" />
+            <path d="M0 230V196H48C48 178 62 168 78 168C94 168 108 178 108 196H150V176L155 162L160 176V196H290V186C290 172 304 164 318 164C332 164 346 172 346 186V196H392V176L397 162L402 176V196H440V230H0Z" fill="#020617" fill-opacity="0.42" />
+          </svg>
+        `,
+        bodyWatermarkSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 440 850" fill="none">
+            <path d="M40 700C140 560 300 560 400 700" stroke="#6d28d9" stroke-opacity="0.05" stroke-width="10" stroke-linecap="round" />
+            <circle cx="380" cy="300" r="90" stroke="#6d28d9" stroke-opacity="0.045" stroke-width="10" />
+          </svg>
+        `,
+        topNavOrnamentSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 410 74" preserveAspectRatio="none" fill="none">
+            <path d="M30 56C110 18 250 18 380 52" stroke="#fde047" stroke-opacity="0.35" stroke-width="1.4" stroke-dasharray="3 5" stroke-linecap="round" />
+            <circle cx="380" cy="52" r="2.2" fill="#fde047" fill-opacity="0.6" />
+          </svg>
+        `,
+        footerNavOrnamentSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 410 64" preserveAspectRatio="xMidYMid slice" fill="none">
+            <path d="M0 50C120 34 290 34 410 50V64H0V50Z" fill="#6d28d9" fill-opacity="0.08" />
+            <path d="M30 40C120 12 290 12 380 40" stroke="#6d28d9" stroke-opacity="0.22" stroke-width="1.2" stroke-dasharray="3 5" stroke-linecap="round" />
+            <circle cx="30" cy="40" r="2.5" fill="#6d28d9" fill-opacity="0.35" />
+            <circle cx="380" cy="40" r="2.5" fill="#6d28d9" fill-opacity="0.35" />
+          </svg>
+        `,
+      },
+
+      maulid: {
+        shortName: 'Maulid Nabi',
+        icon: SEA_ICO.mosque,
+        label: 'Maulid Nabi',
+        pillText: 'Maulid Nabi',
+        greetingShow: true,
+        greetingIcon: SEA_ICO.moon,
+        greetingText: 'Peringatan Maulid Nabi Muhammad SAW {Y}H',
+        greetingSub: 'Berkah Maulid',
+        colors: {
+          '--desktop-bg-start': '#bbf7d0',
+          '--desktop-bg-end': '#86efac',
+          '--app-bg-start': '#f0fdf4',
+          '--app-bg-end': '#dcfce7',
+          '--pattern-color': 'rgba(4, 120, 87, 0.06)',
+          '--header-bg-start': '#064e3b',
+          '--header-bg-end': '#059669',
+          '--accent-primary': '#047857',
+          '--accent-dark': '#064e3b',
+          '--accent-soft': '#ecfdf5',
+          '--accent-glow': 'rgba(4, 120, 87, 0.22)',
+          '--nav-surface': 'rgba(240, 253, 244, 0.95)',
+          '--nav-border': 'rgba(187, 247, 208, 0.9)',
+          '--nav-text-muted': '#047857',
+          '--nav-pill-bg': '#dcfce7',
+          '--card-surface': '#ffffff',
+          '--card-border': '#bbf7d0',
+          '--text-primary': '#064e3b',
+          '--text-secondary': '#047857',
+          '--hero-bg-start': '#064e3b',
+          '--hero-bg-end': '#059669',
+        },
+        artworkSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 440 230" preserveAspectRatio="xMidYMid slice" fill="none">
+            <circle cx="350" cy="70" r="70" fill="#fde047" fill-opacity="0.12" class="ss-sea-pulse" />
+            <circle cx="350" cy="70" r="42" fill="#fde047" fill-opacity="0.14" />
+            <path d="M350 70L350 0M350 70L420 20M350 70L440 70M350 70L420 120M350 70L280 20M350 70L260 70" stroke="#fde047" stroke-opacity="0.22" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M358 44C345 46 336 57 336 69C336 82 347 93 360 93C366 93 371 91 375 88C372 89 369 89 366 89C353 89 342 79 342 66C342 57 348 48 358 44Z" fill="#fef9c3" fill-opacity="0.95" />
+            <circle cx="258" cy="34" r="2" fill="white" class="ss-sea-twinkle" />
+            <circle cx="215" cy="58" r="2.4" fill="#fde047" class="ss-sea-twinkle2" />
+            <circle cx="300" cy="22" r="1.6" fill="white" class="ss-sea-twinkle2" />
+            <path d="M0 230V190H70C70 168 90 154 110 154C130 154 150 168 150 190H210V160L216 140L222 160V190H300C300 172 316 162 332 162C348 162 364 172 364 190H440V230H0Z" fill="#022c22" fill-opacity="0.4" />
+          </svg>
+        `,
+        bodyWatermarkSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 440 850" fill="none">
+            <circle cx="380" cy="380" r="120" stroke="#047857" stroke-opacity="0.05" stroke-width="12" />
+            <circle cx="380" cy="380" r="70" stroke="#047857" stroke-opacity="0.04" stroke-width="8" />
+          </svg>
+        `,
+        topNavOrnamentSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 410 74" preserveAspectRatio="none" fill="none">
+            <path d="M370 0L370 74M340 0L390 74M400 0L350 74" stroke="#fde047" stroke-opacity="0.16" stroke-width="1.5" />
+            <circle cx="370" cy="30" r="3" fill="#fde047" fill-opacity="0.4" />
+          </svg>
+        `,
+        footerNavOrnamentSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 410 64" preserveAspectRatio="xMidYMid slice" fill="none">
+            <path d="M0 52C120 38 290 38 410 52V64H0V52Z" fill="#047857" fill-opacity="0.09" />
+            <path d="M30 14L34 24L44 25L36 31L39 41L30 36L21 41L24 31L16 25L26 24Z" fill="#047857" fill-opacity="0.22" />
+            <path d="M380 14L384 24L394 25L386 31L389 41L380 36L371 41L374 31L366 25L376 24Z" fill="#047857" fill-opacity="0.22" />
+          </svg>
+        `,
+      },
+
+      harbolnas: {
+        shortName: 'Harbolnas',
+        icon: SEA_ICO.bag,
+        label: 'Harbolnas 11.11 & 12.12',
+        pillText: 'Harbolnas',
+        greetingShow: true,
+        greetingIcon: SEA_ICO.zap,
+        greetingText: 'Harbolnas Sale • Diskon Gila-gilaan',
+        greetingSub: 'Flash Sale',
+        colors: {
+          '--desktop-bg-start': '#fecdd3',
+          '--desktop-bg-end': '#fda4af',
+          '--app-bg-start': '#fff8f5',
+          '--app-bg-end': '#ffe4e6',
+          '--pattern-color': 'rgba(225, 29, 72, 0.05)',
+          '--header-bg-start': '#be123c',
+          '--header-bg-end': '#f97316',
+          '--accent-primary': '#e11d48',
+          '--accent-dark': '#9f1239',
+          '--accent-soft': '#fff1f2',
+          '--accent-glow': 'rgba(225, 29, 72, 0.22)',
+          '--nav-surface': 'rgba(255, 248, 245, 0.96)',
+          '--nav-border': 'rgba(254, 205, 211, 0.9)',
+          '--nav-text-muted': '#be123c',
+          '--nav-pill-bg': '#ffe4e6',
+          '--card-surface': '#ffffff',
+          '--card-border': '#fecdd3',
+          '--text-primary': '#4c0519',
+          '--text-secondary': '#9f1239',
+          '--hero-bg-start': '#9f1239',
+          '--hero-bg-end': '#ea580c',
+        },
+        artworkSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 440 230" preserveAspectRatio="xMidYMid slice" fill="none">
+            <circle cx="360" cy="70" r="52" fill="#fde047" fill-opacity="0.9" class="ss-sea-pulse" />
+            <circle cx="360" cy="70" r="40" stroke="#be123c" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 4" />
+            <text x="360" y="82" text-anchor="middle" font-size="34" font-weight="800" fill="#be123c" font-family="sans-serif">%</text>
+            <circle cx="240" cy="40" r="4" fill="#fde047" class="ss-sea-float" />
+            <circle cx="290" cy="150" r="5" fill="#ffffff" fill-opacity="0.8" class="ss-sea-twinkle" />
+            <circle cx="180" cy="90" r="3" fill="#fb7185" class="ss-sea-twinkle2" />
+            <circle cx="120" cy="34" r="4" fill="#fdba74" class="ss-sea-float" />
+            <rect x="200" y="120" width="10" height="10" rx="2" fill="#fde047" fill-opacity="0.85" transform="rotate(25 205 125)" class="ss-sea-twinkle2" />
+            <rect x="70" y="80" width="9" height="9" rx="2" fill="#ffffff" fill-opacity="0.7" transform="rotate(-20 74 84)" class="ss-sea-twinkle" />
+            <path d="M0 230V200C80 184 160 214 240 196C320 178 380 206 440 192V230H0Z" fill="#4c0519" fill-opacity="0.22" />
+          </svg>
+        `,
+        bodyWatermarkSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 440 850" fill="none">
+            <circle cx="380" cy="360" r="120" stroke="#e11d48" stroke-opacity="0.045" stroke-width="12" stroke-dasharray="10 12" />
+            <circle cx="50" cy="680" r="90" stroke="#f97316" stroke-opacity="0.05" stroke-width="10" />
+          </svg>
+        `,
+        topNavOrnamentSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 410 74" preserveAspectRatio="none" fill="none">
+            <circle cx="360" cy="20" r="3" fill="#fde047" fill-opacity="0.6" />
+            <circle cx="330" cy="50" r="2" fill="#ffffff" fill-opacity="0.4" />
+            <rect x="385" y="40" width="7" height="7" rx="1.5" fill="#fde047" fill-opacity="0.5" transform="rotate(20 388 43)" />
+          </svg>
+        `,
+        footerNavOrnamentSVG: `
+          <svg class="ss-sea-svg" viewBox="0 0 410 64" preserveAspectRatio="xMidYMid slice" fill="none">
+            <path d="M0 50C100 36 300 60 410 46V64H0V50Z" fill="#e11d48" fill-opacity="0.08" />
+            <circle cx="30" cy="22" r="3" fill="#e11d48" fill-opacity="0.3" />
+            <circle cx="380" cy="24" r="3" fill="#f97316" fill-opacity="0.35" />
+            <rect x="60" y="30" width="7" height="7" rx="1.5" fill="#f97316" fill-opacity="0.3" transform="rotate(20 63 33)" />
+            <rect x="345" y="30" width="7" height="7" rx="1.5" fill="#e11d48" fill-opacity="0.28" transform="rotate(-20 348 33)" />
+          </svg>
+        `,
+      },
+
       darkneon: {
         shortName: 'Dark Glass',
         icon: SEA_ICO.sparkle,
@@ -783,10 +985,13 @@ var SEASON_THEMES = {
         if (H.month === 10 && H.day <= 7) return 'idulfitri';
         if (H.month === 12 && H.day <= 14) return 'iduladha';
         if (H.month === 1 && H.day <= 10) return 'muharram';
+        if (H.month === 3 && H.day >= 10 && H.day <= 13) return 'maulid';
+        if (H.month === 7 && H.day >= 26 && H.day <= 28) return 'isra';
       }
       if (C && C.monthRaw === '1' && C.day <= 15) return 'imlek';
       var m = NOW.getMonth() + 1, d = NOW.getDate();
       if (m === 8 && d <= 17) return 'kemerdekaan';
+      if ((m === 11 || m === 12) && d >= 9 && d <= 12) return 'harbolnas';
       if ((m === 12 && d >= 15) || (m === 1 && d <= 2)) return 'natal';
       return 'default';
     }
