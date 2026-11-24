@@ -1,4 +1,4 @@
-/* Shona Store - CSS tema musiman (Ramadan, Nuzulul Quran, Idul Fitri, Idul Adha, Muharram, Imlek, Natal, Kemerdekaan, Midnight Glass)
+/* Shona Store - CSS tema musiman (Ramadan, Nuzulul Quran, Idul Fitri, Idul Adha, Muharram, Imlek, Natal, Kemerdekaan, Harbolnas, Hari Ibu, Hari Ayah, Midnight Glass)
    Dipindah dari template XML. Dimuat lewat <link> di <head>. */
 body.ss-season-dark .ssa{--ssa-surface:var(--ss-card);--ssa-soft:rgba(148, 163, 184, 0.1);--ssa-line:var(--ss-border);--ssa-text:var(--ss-text);--ssa-sub:var(--ss-muted);--ssa-a-soft:rgba(16, 185, 129, 0.12)}
 body.ss-season-dark .ssa-head{background:var(--ssa-surface)}
@@ -109,3 +109,21 @@ body.ss-season-dark .sslg-tabs,body.ss-season-dark .sslg-sc,body.ss-season-dark 
 body.ss-season-dark .sslg-chip,body.ss-season-dark .sslg-tw{background:rgba(30, 41, 59, .7);border-color:#334155;color:#E2E8F0}
 body.ss-season-dark .sslg-tb,body.ss-season-dark .sslg-tb td{color:#E2E8F0;border-color:#334155}
 body.ss-season-dark .sslg-btn.ghost2{background:#1E293B;color:#E2E8F0}
+
+/* ===== Header tema musiman: ringkas di mobile (berlaku untuk SEMUA tema) =====
+   Catatan: strip-wrap harus >= 46px karena navbar menimpa header sebesar -38px. */
+@media (max-width: 768px){
+  body.ss-season-on .ss-header{border-radius:0 0 28px 28px}
+  body.ss-season-on .ss-header-inner{padding-top:8px;padding-bottom:8px;row-gap:8px}
+  body.ss-season-on .ss-brand{gap:9px}
+  body.ss-season-on .ss-brand-icon{width:38px;height:38px;border-radius:12px}
+  body.ss-season-on .ss-brand-icon svg{width:22px;height:24px}
+  body.ss-season-on .ss-brand-text .ss-site-title{font-size:20px;line-height:1.1}
+  body.ss-season-on .ss-brand-text p{font-size:10.5px;margin-top:1px}
+  body.ss-season-on .ss-search-form{height:42px}
+  body.ss-season-on .ss-search-submit{width:42px;height:34px}
+  body.ss-season-on .ss-sea-strip{padding:5px 10px;font-size:11px;border-radius:12px}
+  body.ss-season-on .ss-sea-strip-icon{font-size:14px}
+  body.ss-season-on .ss-sea-strip-sub{font-size:9px;padding:2px 7px}
+  body.ss-season-on .ss-sea-strip-wrap{padding-bottom:46px}
+}
